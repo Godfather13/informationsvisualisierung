@@ -13,12 +13,25 @@
 		
 		<div id="wrapper">
 		
-			<div id="bar_chart"></div>
+			<div class="module">
+			
+				<form oninput="numerisch.value=auswertung.value">
+
+					<input id="year" type="range" name="auswertung" min="1990" max="2015" value="2000">
+					Gewähltes Jahr: <output name="numerisch">2000</output>
+
+				</form> 
+			
+			</div>
+			
+			<div id="bar_chart" class="module"></div>
 		
 		</div>
 	
 		<script src="http://d3js.org/d3.v3.min.js"></script>
 		<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+		<script src="script_d3.js"></script>
+		<script src="jquery.js"></script>
 		<script src="script.js"></script>
 	
 	</body>

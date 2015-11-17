@@ -23,8 +23,12 @@ body{
 		border:1px solid grey;
 	}
 	
-		#wrapper #bar_chart{
+		#wrapper .module{
 			width: 500px;
+			margin-bottom:20px;
+		}	
+		
+		#wrapper #bar_chart{
 			height: 500px;
 		}
 	

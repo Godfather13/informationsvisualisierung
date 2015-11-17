@@ -1,3 +1,10 @@
+$("#year").change(function () {
+	
+	alert($(this).val());
+});
+
+/* D3 */
+
 var margin = {top: 30, right: 20, bottom: 30, left: 40},
     width = document.getElementById('bar_chart').offsetWidth - margin.left - margin.right,
     height = document.getElementById('bar_chart').offsetHeight - margin.top - margin.bottom;
