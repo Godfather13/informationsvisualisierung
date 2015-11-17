@@ -1,7 +1,7 @@
-var margin = {top: 40, right: 20, bottom: 30, left: 40},
-    width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
-
+var margin = {top: 30, right: 20, bottom: 30, left: 40},
+    width = document.getElementById('bar_chart').offsetWidth - margin.left - margin.right,
+    height = document.getElementById('bar_chart').offsetHeight - margin.top - margin.bottom;
+	
 var formatPercent = d3.format(".0%");
 
 var x = d3.scale.ordinal()
@@ -26,7 +26,7 @@ var tip = d3.tip()
     return "<strong>Frequency:</strong> <span style='color:red'>" + d.frequency + "</span>";
   })
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select("#bar_chart").append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
   .append("g")

@@ -23,6 +23,11 @@ body{
 		border:1px solid grey;
 	}
 	
+		#wrapper #bar_chart{
+			width: 500px;
+			height: 500px;
+		}
+	
 /* D3 */
 
 	.axis path,
