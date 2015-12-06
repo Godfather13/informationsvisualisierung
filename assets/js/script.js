@@ -1,13 +1,16 @@
+
 $("#year").change(function () {
 	
-	//alert($(this).val());
-	//year = $(this).val();
+	alert($(this).val());
 });
 
+$.getScript("assets/js/bootstrap.min.js", function() {
+});
+$.getScript("assets/js/bootstrap-slider.js", function() {
+});
 
+$("year").text()
 
-//var value = yearSlider.slider('getValue');
-//alert("value");
 
 /* CHART 1 */
 

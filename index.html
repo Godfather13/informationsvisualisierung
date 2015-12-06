@@ -44,7 +44,7 @@
             <input id="ex14" class="yearSlider" type="text"/>
             
             <h3>Gewähltes Jahr:</h3>
-			<div id="yearValue">1990</div>
+			<div id="year"></div>
 
 		</form> 
 		
@@ -104,8 +104,7 @@
             $("#ex14").slider().change(function() {
                 var mySlider = $("#ex14").slider();
                 var value = mySlider.slider('getValue');
-                $("#yearValue").text(value + 1800);
-                
+                $("#year").text(value + 1800); 
             });
             
 		});
