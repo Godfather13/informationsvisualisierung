@@ -41,10 +41,10 @@
           
 		<form oninput="numerisch.value=auswertung.value">
 
-            <input id="ex14" type="text"/>
+            <input id="ex14" class="yearSlider" type="text"/>
             
             <h3>Gewähltes Jahr:</h3>
-			<output name="numerisch">1990</output>
+			<div id="yearValue">1990</div>
 
 		</form> 
 		
@@ -100,7 +100,14 @@
 				ticks_positions: [0, 5, 10, 15, 22, 30, 37, 45, 55, 70, 85, 100],
 				ticks_snap_bounds: 0
             });
-
+            
+            $("#ex14").slider().change(function() {
+                var mySlider = $("#ex14").slider();
+                var value = mySlider.slider('getValue');
+                $("#yearValue").text(value + 1800);
+                
+            });
+            
 		});
     </script>
       

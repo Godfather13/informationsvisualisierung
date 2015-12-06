@@ -4,6 +4,11 @@ $("#year").change(function () {
 	//year = $(this).val();
 });
 
+
+
+//var value = yearSlider.slider('getValue');
+//alert("value");
+
 /* CHART 1 */
 
 var margin_1 = {top: 20, right: 40, bottom: 30, left: 20},
