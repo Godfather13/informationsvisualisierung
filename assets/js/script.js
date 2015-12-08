@@ -1,14 +1,11 @@
-$("#year").change(function () {
-	
-	alert($(this).val());
-});
-
 $.getScript("assets/js/bootstrap.min.js", function() {
 });
 $.getScript("assets/js/bootstrap-slider.js", function() {
 });
 
-$("year").text()
+$( document ).ready(function() {
+	$("#year").html("1990");
+});
 
 
 /* CHART 1 */
@@ -34,7 +31,7 @@ var yAxis_1 = d3.svg.axis()
 var svg_1 = d3.select("#chart_1").append("svg")
     .attr("width", width_1 + margin_1.left + margin_1.right)
     .attr("height", height_1 + margin_1.top + margin_1.bottom)
-  .append("g")
+	.append("g")
     .attr("transform", "translate(" + margin_1.left + "," + margin_1.top + ")");
 
 // A sliding container to hold the bars by birthyear.
