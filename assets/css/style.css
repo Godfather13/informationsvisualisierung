@@ -1,3 +1,11 @@
 .icon{
     width: 150px;
 }
+
+.only_female{
+	fill: #E377C2 !important;
+}
+
+.tooltip.tooltip-main.top{
+	display:none;
+}

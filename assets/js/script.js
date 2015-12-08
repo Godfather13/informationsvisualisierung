@@ -53,124 +53,124 @@ $( document ).ready(function() {
 // render function
 	function render(male, female){
 			
-	d3.select("svg").remove();
-			
-	// An SVG element with a bottom-right origin.
-		var svg_pop_chart = d3.select("#chart_1").append("svg")
-			.attr("width", width_pop_chart + margin_pop_chart.left + margin_pop_chart.right)
-			.attr("height", height_pop_chart + margin_pop_chart.top + margin_pop_chart.bottom)
-			.append("g")
-			.attr("transform", "translate(" + margin_pop_chart.left + "," + margin_pop_chart.top + ")");
+		d3.select("svg").remove();
+				
+		// An SVG element with a bottom-right origin.
+			var svg_pop_chart = d3.select("#chart_1").append("svg")
+				.attr("width", width_pop_chart + margin_pop_chart.left + margin_pop_chart.right)
+				.attr("height", height_pop_chart + margin_pop_chart.top + margin_pop_chart.bottom)
+				.append("g")
+				.attr("transform", "translate(" + margin_pop_chart.left + "," + margin_pop_chart.top + ")");
 
-	// A sliding container to hold the bars by birthyear.
-		var birthyears = svg_pop_chart.append("g").attr("class", "birthyears");
-				
-	// ---
-		d3.csv("data/population.csv", function(error, raw_data) {
-			
-			// Convert strings to numbers.
-				raw_data.forEach(function(d) {
-					d.people = +d.people;
-					d.year = +d.year;
-					d.age = +d.age;
-				});
-				
-			// Split in male and female
-				var male_data = raw_data.filter(function(row) {
-					return row["sex"] == 1});
-				
-				
-				var female_data = raw_data.filter(function(row) {
-					return row["sex"] == 2}); 
-			
-			// merge data
-				if(male && female) data = $.merge(male_data, female_data);
-				if(!male && female) data = female_data;
-				if(male && !female) data = male_data;
-				if(!male && !female) data = [];
-
-			// initially compute the extent of the data set in age and years.
-				var age1, year0, year1, year, birthyear;
+		// A sliding container to hold the bars by birthyear.
+			var birthyears = svg_pop_chart.append("g").attr("class", "birthyears");
 					
-			// Compute the extent of the data set in age and years.
-				age1 = d3.max(data, function(d) { return d.age; }),
-				year0 = d3.min(data, function(d) { return d.year; }),
-				year1 = d3.max(data, function(d) { return d.year; }),
-				year = year1;
-
-			// Update the scale domains.
-				x_pop_chart.domain([year1 - age1, year1]);
-				y_pop_chart.domain([0, d3.max(data, function(d) { return d.people; })]);
-
-			// Produce a map from year and birthyear to [male, female].
-				data = d3.nest()
-					.key(function(d) { return d.year; })
-					.key(function(d) { return d.year - d.age; })
-					.rollup(function(v) { return v.map(function(d) { return d.people; }); })
-					.map(data);
-
-			// Add an axis to show the population values.
-				svg_pop_chart.append("g")
-					.attr("class", "y axis")
-					.attr("transform", "translate(" + width_pop_chart + ",0)")
-					.call(yAxis_pop_chart)
-					.selectAll("g")
-					.filter(function(value) { return !value; })
-					.classed("zero", true);
-			
-			// Add labeled rects for each birthyear (so that no enter or exit is required).
-				birthyear = birthyears.selectAll(".birthyear")
-					.data(d3.range(year0 - age1, year1 + 1, 5))
-					.enter().append("g")
-					.attr("class", "birthyear")
-					.attr("transform", function(birthyear) { return "translate(" + x_pop_chart(birthyear) + ",0)"; });
-
-				birthyear.selectAll("rect")
-					.data(function(birthyear) { return data[year][birthyear] || [0, 0]; })
-					.enter().append("rect")
-					.attr("x", -barWidth_pop_chart / 2)
-					.attr("width", barWidth_pop_chart)
-					.attr("y", y_pop_chart)
-					.attr("height", function(value) { return height_pop_chart - y_pop_chart(value); });
-
-			// Add labels to show birthyear.
-				birthyear.append("text")
-					.attr("y", height_pop_chart - 4)
-					.text(function(birthyear) { return birthyear; });
+		// ---
+			d3.csv("data/population.csv", function(error, raw_data) {
+				
+				// Convert strings to numbers.
+					raw_data.forEach(function(d) {
+						d.people = +d.people;
+						d.year = +d.year;
+						d.age = +d.age;
+					});
 					
-			// Add labels to show age (separate; not animated).
-				svg_pop_chart.selectAll(".age")
-					.data(d3.range(0, age1 + 1, 5))
-					.enter().append("text")
-					.attr("class", "age")
-					.attr("x", function(age) { return x_pop_chart(year - age); })
-					.attr("y", height_pop_chart + 4)
-					.attr("dy", ".71em")
-				.text(function(age) { return age; });
+				// Split in male and female
+					var male_data = raw_data.filter(function(row) {
+						return row["sex"] == 1});
+					
+					var female_data = raw_data.filter(function(row) {
+						return row["sex"] == 2});
+				
+				// merge data
+					if(male && female) data = $.merge(male_data, female_data);
+					if(!male && female) data = female_data;
+					if(male && !female) data = male_data;
+					if(!male && !female) data = [];
 
-			// change year
-				d3.select("#year").on("DOMSubtreeModified", function() {
+				// initially compute the extent of the data set in age and years.
+					var age1, year0, year1, year, birthyear;
+						
+				// Compute the extent of the data set in age and years.
+					age1 = d3.max(data, function(d) { return d.age; }),
+					year0 = d3.min(data, function(d) { return d.year; }),
+					year1 = d3.max(data, function(d) { return d.year; }),
+					year = year1;
 
-					year = $("#year").html();
-					update_char_1();
-				});
-		  
-				function update_char_1(){
-					  
-					if( !(year in data) ) return;
+				// Update the scale domains.
+					x_pop_chart.domain([year1 - age1, year1]);
+					y_pop_chart.domain([0, d3.max(data, function(d) { return d.people; })]);
 
-					birthyears.transition()
-						.duration(750)
-						.attr("transform", "translate(" + (x_pop_chart(year1) - x_pop_chart(year)) + ",0)");
+				// Produce a map from year and birthyear to [male, female].
+					data = d3.nest()
+						.key(function(d) { return d.year; })
+						.key(function(d) { return d.year - d.age; })
+						.rollup(function(v) { return v.map(function(d) { return d.people; }); })
+						.map(data);
+
+				// Add an axis to show the population values.
+					svg_pop_chart.append("g")
+						.attr("class", "y axis")
+						.attr("transform", "translate(" + width_pop_chart + ",0)")
+						.call(yAxis_pop_chart)
+						.selectAll("g")
+						.filter(function(value) { return !value; })
+						.classed("zero", true);
+				
+				// Add labeled rects for each birthyear (so that no enter or exit is required).
+					birthyear = birthyears.selectAll(".birthyear")
+						.data(d3.range(year0 - age1, year1 + 1, 5))
+						.enter().append("g")
+						.attr("class", "birthyear")
+						.attr("transform", function(birthyear) { return "translate(" + x_pop_chart(birthyear) + ",0)"; });
 
 					birthyear.selectAll("rect")
 						.data(function(birthyear) { return data[year][birthyear] || [0, 0]; })
-						.transition()
-						.duration(750)
+						.enter().append("rect")
+						.attr("x", -barWidth_pop_chart / 2)
+						.attr("width", barWidth_pop_chart)
 						.attr("y", y_pop_chart)
+						.attr("class", !male && female ? "only_female" : "" )  
 						.attr("height", function(value) { return height_pop_chart - y_pop_chart(value); });
-				}
-		});
+
+				// Add labels to show birthyear.
+					birthyear.append("text")
+						.attr("y", height_pop_chart - 4)
+						.text(function(birthyear) { return birthyear; });
+						
+				// Add labels to show age (separate; not animated).
+					svg_pop_chart.selectAll(".age")
+						.data(d3.range(0, age1 + 1, 5))
+						.enter().append("text")
+						.attr("class", "age")
+						.attr("x", function(age) { return x_pop_chart(year - age); })
+						.attr("y", height_pop_chart + 4)
+						.attr("dy", ".71em")
+					.text(function(age) { return age; });
+
+				// change year
+					d3.select("#year").on("DOMSubtreeModified", function(){
+
+						year = $("#year").html();
+						update_char_1();
+					});
+			  
+					function update_char_1(){
+						  
+						if( !(year in data) ) return;
+
+						birthyears.transition()
+							.duration(750)
+							.attr("transform", "translate(" + (x_pop_chart(year1) - x_pop_chart(year)) + ",0)");
+
+						birthyear.selectAll("rect")
+							.data(function(birthyear) { return data[year][birthyear] || [0, 0]; })
+							.transition()
+							.duration(750)
+							.attr("y", y_pop_chart)
+							.attr("height", function(value) { return height_pop_chart - y_pop_chart(value); });
+					}
+			});
 	}
 	
 /* CHART 2 */
@@ -196,27 +196,29 @@ var svg_2 = d3.select("#chart_2").append("svg")
   .append("g")
     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
-d3.csv("data/data2.csv", function(error, data) {
+d3.csv("data/pie_data.csv", function(error, udata) {
 
-  data.forEach(function(d) {
-    d.population = +d.population;
-  });
+	var data = udata.filter(function(row) {
+	return row["year"] == 1990});
 
-  var g = svg_2.selectAll(".arc")
-      .data(pie(data))
-    .enter().append("g")
-      .attr("class", "arc");
+	data.forEach(function(d) {
+		d.population = +d.population;
+	});
 
-  g.append("path")
-      .attr("d", arc)
-      .style("fill", function(d) { return color(d.data.age); });
+	var g = svg_2.selectAll(".arc")
+		.data(pie(data))
+		.enter().append("g")
+		.attr("class", "arc");
 
-  g.append("text")
-      .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
-      .attr("dy", ".35em")
-      .style("text-anchor", "middle")
-      .text(function(d) { return d.data.age; });
+	g.append("path")
+		.attr("d", arc)
+		.style("fill", function(d) { return color(d.data.age); });
 
+	g.append("text")
+		.attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
+		.attr("dy", ".35em")
+		.style("text-anchor", "middle")
+		.text(function(d) { return d.data.age; });
 });
 
 /* CHART 3 */
@@ -242,7 +244,7 @@ var svg_3 = d3.select("#chart_3").append("svg")
   .append("g")
     .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
-d3.csv("data/data2.csv", function(error, data) {
+d3.csv("data/pie_data.csv", function(error, data) {
 
   data.forEach(function(d) {
     d.population = +d.population;
@@ -305,7 +307,7 @@ var svg_4 = d3.select("#chart_4").append("svg")
 
 svg_4.call(tip);
 
-d3.tsv("data/data.tsv", type, function(error, data) {
+d3.tsv("data/bar_data.tsv", type, function(error, data) {
   x.domain(data.map(function(d) { return d.letter; }));
   y.domain([0, d3.max(data, function(d) { return d.frequency; })]);
 
