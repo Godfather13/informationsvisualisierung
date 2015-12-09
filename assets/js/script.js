@@ -6,7 +6,7 @@ $.getScript("assets/js/bootstrap-slider.js", function() {
 $(document).ready(function() {
 
 	$("#ex14").slider({
-		ticks: [0, 125, 150, 175, 180, 185, 190, 195, 200, 205, 210, 215],
+		ticks: [0, 25, 50, 75, 80, 85, 90, 95, 100, 105, 110, 115],
 		ticks_labels: ['1900', '1925', '1950', '1975', '1980', '1985', '1990', '1995', '2000', '2005', '2010', '2015'],
 		ticks_positions: [0, 5, 10, 15, 22, 30, 37, 45, 55, 70, 85, 100],
 		ticks_snap_bounds: 0
@@ -15,13 +15,17 @@ $(document).ready(function() {
 	$("#ex14").slider().change(function() {
 		var mySlider = $("#ex14").slider();
 		var value = mySlider.slider('getValue');
-		var yr = value + 1800;
+		var yr = value + 1900;
 		$("#year").text(yr); 
 		
 		update_charts(yr);
 	});
+    
+    var mySlider = $("#ex14").slider();
+    mySlider.setValue(1900);
 
-	$("#year").html("1990");
+
+	$("#year").html("1900");
 
 });
 
