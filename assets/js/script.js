@@ -220,7 +220,7 @@ var pie = d3.layout.pie()
     .sort(null)
     .value(function(d) { return d.population; });
 
-render_char_1( year );
+render_char_1( 1990 );
 	
 function render_char_1( selected_year ){
 	
@@ -235,7 +235,7 @@ function render_char_1( selected_year ){
 	d3.csv("data/pie_data.csv", function(error, udata) {
 
 		var data = udata.filter(function(row) {
-			return row["year"] < selected_year && row["year"] > selected_year -24
+			return row["year"] <= selected_year && row["year"] >= selected_year -24
 		});
 
 		data.forEach(function(d) {
@@ -276,7 +276,7 @@ var pie = d3.layout.pie()
     .sort(null)
     .value(function(d) { return d.population; });
 
-render_char_2( year );
+render_char_2( 1990 );
 	
 function render_char_2( selected_year ){
 	
@@ -291,7 +291,7 @@ function render_char_2( selected_year ){
 	d3.csv("data/pie_data.csv", function(error, udata) {
 
 		var data = udata.filter(function(row) {
-		return row["year"] < selected_year && row["year"] > selected_year -24
+		return row["year"] <= selected_year && row["year"] >= selected_year -24
 		});
 
 		data.forEach(function(d) {
@@ -346,7 +346,7 @@ var tip = d3.tip()
     return "<strong>Frequency:</strong> <span style='color:red'>" + d.frequency + "</span>";
   })
 
-  render_char_3( year );
+  render_char_3( 1990 );
   
  function render_char_3( selected_year ){
   
@@ -363,7 +363,7 @@ var tip = d3.tip()
 	d3.csv("data/bar_data.csv", type, function(error, udata) {
 		
 		var data = udata.filter(function(row) {
-		return row["year"] < selected_year && row["year"] > selected_year -24
+		return row["year"] <= selected_year && row["year"] >= selected_year -24
 		});
 		
 	  x.domain(data.map(function(d) { return d.letter; }));
