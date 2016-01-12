@@ -1,0 +1,326 @@
+unemployed,population,year,age
+411,18374,2000,Altstadt - Lehel
+435,18462,2001,Altstadt - Lehel
+571,18193,2002,Altstadt - Lehel
+671,18159,2003,Altstadt - Lehel
+624,18210,2004,Altstadt - Lehel
+721,18631,2005,Altstadt - Lehel
+525,18876,2006,Altstadt - Lehel
+390,19228,2007,Altstadt - Lehel
+348,19505,2008,Altstadt - Lehel
+395,18932,2009,Altstadt - Lehel
+365,19207,2010,Altstadt - Lehel
+329,19707,2011,Altstadt - Lehel
+304,20048,2012,Altstadt - Lehel
+1589,44451,2000,Ludwigsvorstadt - Isarvorstadt
+1533,44484,2001,Ludwigsvorstadt - Isarvorstadt
+1960,44059,2002,Ludwigsvorstadt - Isarvorstadt
+2209,43637,2003,Ludwigsvorstadt - Isarvorstadt
+2038,43469,2004,Ludwigsvorstadt - Isarvorstadt
+2459,43945,2005,Ludwigsvorstadt - Isarvorstadt
+1946,45736,2006,Ludwigsvorstadt - Isarvorstadt
+1564,46520,2007,Ludwigsvorstadt - Isarvorstadt
+1369,47599,2008,Ludwigsvorstadt - Isarvorstadt
+1531,46446,2009,Ludwigsvorstadt - Isarvorstadt
+1464,47357,2010,Ludwigsvorstadt - Isarvorstadt
+1292,48231,2011,Ludwigsvorstadt - Isarvorstadt
+1258,49657,2012,Ludwigsvorstadt - Isarvorstadt
+1161,41726,2000,Maxvorstadt
+1143,42159,2001,Maxvorstadt
+1520,41606,2002,Maxvorstadt
+1777,41502,2003,Maxvorstadt
+1591,41581,2004,Maxvorstadt
+1751,42201,2005,Maxvorstadt
+1580,46058,2006,Maxvorstadt
+1397,47711,2007,Maxvorstadt
+1175,48884,2008,Maxvorstadt
+1292,48619,2009,Maxvorstadt
+1203,48875,2010,Maxvorstadt
+1084,49498,2011,Maxvorstadt
+1048,50877,2012,Maxvorstadt
+1314,53789,2000,Schwabing West
+1332,54580,2001,Schwabing West
+1690,54272,2002,Schwabing West
+2001,54351,2003,Schwabing West
+1871,55231,2004,Schwabing West
+2181,56033,2005,Schwabing West
+2001,59553,2006,Schwabing West
+1620,61514,2007,Schwabing West
+1369,62541,2008,Schwabing West
+1580,62028,2009,Schwabing West
+1364,62856,2010,Schwabing West
+1211,63644,2011,Schwabing West
+1184,64768,2012,Schwabing West
+1411,52028,2000,Au - Haidhausen
+1421,51947,2001,Au - Haidhausen
+1901,52000,2002,Au - Haidhausen
+2183,51636,2003,Au - Haidhausen
+2037,51383,2004,Au - Haidhausen
+2382,52502,2005,Au - Haidhausen
+1955,54382,2006,Au - Haidhausen
+1548,55288,2007,Au - Haidhausen
+1334,55853,2008,Au - Haidhausen
+1519,55590,2009,Au - Haidhausen
+1425,56322,2010,Au - Haidhausen
+1286,57297,2011,Au - Haidhausen
+1251,58881,2012,Au - Haidhausen
+984,34462,2000,Sendling
+995,34820,2001,Sendling
+1299,35102,2002,Sendling
+1521,35113,2003,Sendling
+1513,35691,2004,Sendling
+1999,35966,2005,Sendling
+1711,37146,2006,Sendling
+1394,37940,2007,Sendling
+1191,38335,2008,Sendling
+1406,38112,2009,Sendling
+1351,38567,2010,Sendling
+1258,39002,2011,Sendling
+1258,39567,2012,Sendling
+1342,48388,2000,Sendling - Westpark
+1282,48608,2001,Sendling - Westpark
+1581,48448,2002,Sendling - Westpark
+1901,48564,2003,Sendling - Westpark
+1931,48669,2004,Sendling - Westpark
+2620,49472,2005,Sendling - Westpark
+2303,50903,2006,Sendling - Westpark
+1906,51745,2007,Sendling - Westpark
+1678,52257,2008,Sendling - Westpark
+1972,52185,2009,Sendling - Westpark
+1821,52495,2010,Sendling - Westpark
+1669,53271,2011,Sendling - Westpark
+1582,54552,2012,Sendling - Westpark
+946,24883,2000,Schwanthalerhöhe
+909,24905,2001,Schwanthalerhöhe
+1166,25078,2002,Schwanthalerhöhe
+1371,25328,2003,Schwanthalerhöhe
+1305,25369,2004,Schwanthalerhöhe
+1604,25507,2005,Schwanthalerhöhe
+1383,26103,2006,Schwanthalerhöhe
+1165,26877,2007,Schwanthalerhöhe
+1113,27778,2008,Schwanthalerhöhe
+1287,27814,2009,Schwanthalerhöhe
+1157,28004,2010,Schwanthalerhöhe
+992,28678,2011,Schwanthalerhöhe
+994,29402,2012,Schwanthalerhöhe
+1934,81968,2000,Neuhausen - Nymphenburg
+1947,82235,2001,Neuhausen - Nymphenburg
+2468,81947,2002,Neuhausen - Nymphenburg
+2951,81661,2003,Neuhausen - Nymphenburg
+2767,81921,2004,Neuhausen - Nymphenburg
+3573,82156,2005,Neuhausen - Nymphenburg
+3291,84604,2006,Neuhausen - Nymphenburg
+2428,85964,2007,Neuhausen - Nymphenburg
+2017,87043,2008,Neuhausen - Nymphenburg
+2302,87846,2009,Neuhausen - Nymphenburg
+2149,89286,2010,Neuhausen - Nymphenburg
+1944,92139,2011,Neuhausen - Nymphenburg
+1974,94257,2012,Neuhausen - Nymphenburg
+1146,45507,2000,Moosach
+1103,46174,2001,Moosach
+1423,46333,2002,Moosach
+1763,46546,2003,Moosach
+1681,46856,2004,Moosach
+2363,47198,2005,Moosach
+2315,47754,2006,Moosach
+1972,48306,2007,Moosach
+1809,48451,2008,Moosach
+1957,48692,2009,Moosach
+1708,48421,2010,Moosach
+1633,49384,2011,Moosach
+1621,50253,2012,Moosach
+1936,60225,2000,Milbertshofen -  Am Hart
+1846,61034,2001,Milbertshofen -  Am Hart
+2375,61655,2002,Milbertshofen -  Am Hart
+2761,61886,2003,Milbertshofen -  Am Hart
+2683,63076,2004,Milbertshofen -  Am Hart
+3847,64612,2005,Milbertshofen -  Am Hart
+3644,66992,2006,Milbertshofen -  Am Hart
+2983,67864,2007,Milbertshofen -  Am Hart
+2550,68198,2008,Milbertshofen -  Am Hart
+3007,68023,2009,Milbertshofen -  Am Hart
+2889,68970,2010,Milbertshofen -  Am Hart
+2719,70470,2011,Milbertshofen -  Am Hart
+2666,72506,2012,Milbertshofen -  Am Hart
+1339,57653,2000,Schwabing -  Freimann
+1304,59392,2001,Schwabing -  Freimann
+1671,60060,2002,Schwabing -  Freimann
+2021,60215,2003,Schwabing -  Freimann
+1882,59602,2004,Schwabing -  Freimann
+2344,59767,2005,Schwabing -  Freimann
+2029,62430,2006,Schwabing -  Freimann
+1699,63832,2007,Schwabing -  Freimann
+1574,64350,2008,Schwabing -  Freimann
+1782,63720,2009,Schwabing -  Freimann
+1470,65158,2010,Schwabing -  Freimann
+1353,66706,2011,Schwabing -  Freimann
+1373,68530,2012,Schwabing -  Freimann
+1384,70984,2000,Bogenhausen
+1361,71716,2001,Bogenhausen
+1850,72429,2002,Bogenhausen
+2181,73070,2003,Bogenhausen
+2043,72982,2004,Bogenhausen
+2452,73860,2005,Bogenhausen
+2278,75657,2006,Bogenhausen
+1833,76709,2007,Bogenhausen
+1541,77112,2008,Bogenhausen
+1736,76684,2009,Bogenhausen
+1622,77542,2010,Bogenhausen
+1539,79175,2011,Bogenhausen
+1472,80816,2012,Bogenhausen
+1162,37017,2000,Berg am Laim
+1065,37544,2001,Berg am Laim
+1397,37769,2002,Berg am Laim
+1620,37607,2003,Berg am Laim
+1571,38127,2004,Berg am Laim
+2115,38327,2005,Berg am Laim
+1787,38995,2006,Berg am Laim
+1492,39783,2007,Berg am Laim
+1306,40038,2008,Berg am Laim
+1457,39787,2009,Berg am Laim
+1330,40550,2010,Berg am Laim
+1229,41342,2011,Berg am Laim
+1384,42310,2012,Berg am Laim
+777,43003,2000,Trudering - Riem
+776,45403,2001,Trudering - Riem
+1043,47186,2002,Trudering - Riem
+1290,47919,2003,Trudering - Riem
+1263,48914,2004,Trudering - Riem
+1553,50990,2005,Trudering - Riem
+1536,53915,2006,Trudering - Riem
+1310,56487,2007,Trudering - Riem
+1218,59031,2008,Trudering - Riem
+1399,60879,2009,Trudering - Riem
+1378,62756,2010,Trudering - Riem
+1350,64983,2011,Trudering - Riem
+1460,65869,2012,Trudering - Riem
+2834,99995,2000,Ramersdorf - Perlach
+2669,100387,2001,Ramersdorf - Perlach
+3417,100129,2002,Ramersdorf - Perlach
+4045,100724,2003,Ramersdorf - Perlach
+4005,100844,2004,Ramersdorf - Perlach
+5950,101820,2005,Ramersdorf - Perlach
+5277,102689,2006,Ramersdorf - Perlach
+4273,103447,2007,Ramersdorf - Perlach
+3667,104089,2008,Ramersdorf - Perlach
+4080,103732,2009,Ramersdorf - Perlach
+4045,104737,2010,Ramersdorf - Perlach
+3639,105900,2011,Ramersdorf - Perlach
+3562,107164,2012,Ramersdorf - Perlach
+1260,43974,2000,Obergiesing - Fasangarten
+1238,44143,2001,Obergiesing - Fasangarten
+1619,44616,2002,Obergiesing - Fasangarten
+1953,44761,2003,Obergiesing - Fasangarten
+1939,44473,2004,Obergiesing - Fasangarten
+2474,45132,2005,Obergiesing - Fasangarten
+2056,47007,2006,Obergiesing - Fasangarten
+1801,47791,2007,Obergiesing - Fasangarten
+1652,48282,2008,Obergiesing - Fasangarten
+1826,48425,2009,Obergiesing - Fasangarten
+1636,49030,2010,Obergiesing - Fasangarten
+1546,50656,2011,Obergiesing - Fasangarten
+1563,51183,2012,Obergiesing - Fasangarten
+1204,46153,2000,Untergiesing - Harlaching
+1164,46580,2001,Untergiesing - Harlaching
+1499,46495,2002,Untergiesing - Harlaching
+1822,46707,2003,Untergiesing - Harlaching
+1737,46462,2004,Untergiesing - Harlaching
+2206,46857,2005,Untergiesing - Harlaching
+1896,48075,2006,Untergiesing - Harlaching
+1633,48990,2007,Untergiesing - Harlaching
+1506,49391,2008,Untergiesing - Harlaching
+1699,48911,2009,Untergiesing - Harlaching
+1484,49502,2010,Untergiesing - Harlaching
+1279,50455,2011,Untergiesing - Harlaching
+1339,51180,2012,Untergiesing - Harlaching
+1881,76762,2000,Thalkirchen - Obersendling - Forstenried - Fürstenried - Solln
+1649,77518,2001,Thalkirchen - Obersendling - Forstenried - Fürstenried - Solln
+2091,77659,2002,Thalkirchen - Obersendling - Forstenried - Fürstenried - Solln
+2564,77850,2003,Thalkirchen - Obersendling - Forstenried - Fürstenried - Solln
+2478,78057,2004,Thalkirchen - Obersendling - Forstenried - Fürstenried - Solln
+2928,79148,2005,Thalkirchen - Obersendling - Forstenried - Fürstenried - Solln
+2407,80701,2006,Thalkirchen - Obersendling - Forstenried - Fürstenried - Solln
+2157,82283,2007,Thalkirchen - Obersendling - Forstenried - Fürstenried - Solln
+1843,82771,2008,Thalkirchen - Obersendling - Forstenried - Fürstenried - Solln
+2132,82482,2009,Thalkirchen - Obersendling - Forstenried - Fürstenried - Solln
+2143,83584,2010,Thalkirchen - Obersendling - Forstenried - Fürstenried - Solln
+1991,85468,2011,Thalkirchen - Obersendling - Forstenried - Fürstenried - Solln
+1864,87271,2012,Thalkirchen - Obersendling - Forstenried - Fürstenried - Solln
+927,41689,2000,Hadern
+864,41858,2001,Hadern
+1106,42563,2002,Hadern
+1312,42823,2003,Hadern
+1306,43396,2004,Hadern
+1712,43981,2005,Hadern
+1658,44993,2006,Hadern
+1489,46059,2007,Hadern
+1228,46385,2008,Hadern
+1375,46490,2009,Hadern
+1299,46851,2010,Hadern
+1142,47459,2011,Hadern
+1174,47949,2012,Hadern
+1335,59758,2000,Pasing - Obermenzing
+1231,60445,2001,Pasing - Obermenzing
+1460,60616,2002,Pasing - Obermenzing
+1779,61509,2003,Pasing - Obermenzing
+1767,62081,2004,Pasing - Obermenzing
+2222,62724,2005,Pasing - Obermenzing
+2128,63763,2006,Pasing - Obermenzing
+1572,64773,2007,Pasing - Obermenzing
+1401,65290,2008,Pasing - Obermenzing
+1663,65279,2009,Pasing - Obermenzing
+1559,66244,2010,Pasing - Obermenzing
+1463,67878,2011,Pasing - Obermenzing
+1434,69295,2012,Pasing - Obermenzing
+1006,37423,2000,Aubing - Lochhausen - Langwied
+854,37693,2001,Aubing - Lochhausen - Langwied
+1036,37532,2002,Aubing - Lochhausen - Langwied
+1283,37566,2003,Aubing - Lochhausen - Langwied
+1287,37595,2004,Aubing - Lochhausen - Langwied
+1875,37560,2005,Aubing - Lochhausen - Langwied
+1681,37857,2006,Aubing - Lochhausen - Langwied
+1170,38091,2007,Aubing - Lochhausen - Langwied
+932,38327,2008,Aubing - Lochhausen - Langwied
+1117,38268,2009,Aubing - Lochhausen - Langwied
+1069,38863,2010,Aubing - Lochhausen - Langwied
+962,39789,2011,Aubing - Lochhausen - Langwied
+935,41116,2012,Aubing - Lochhausen - Langwied
+549,26682,2000,Allach - Untermenzing
+462,26794,2001,Allach - Untermenzing
+597,26903,2002,Allach - Untermenzing
+715,26977,2003,Allach - Untermenzing
+706,27374,2004,Allach - Untermenzing
+868,27586,2005,Allach - Untermenzing
+735,27730,2006,Allach - Untermenzing
+592,28165,2007,Allach - Untermenzing
+553,28796,2008,Allach - Untermenzing
+663,28732,2009,Allach - Untermenzing
+674,29161,2010,Allach - Untermenzing
+584,29693,2011,Allach - Untermenzing
+576,30393,2012,Allach - Untermenzing
+1421,52413,2000,Feldmoching - Hasenbergl
+1329,52896,2001,Feldmoching - Hasenbergl
+1726,53010,2002,Feldmoching - Hasenbergl
+2068,52961,2003,Feldmoching - Hasenbergl
+1996,52958,2004,Feldmoching - Hasenbergl
+3031,53389,2005,Feldmoching - Hasenbergl
+2630,54245,2006,Feldmoching - Hasenbergl
+2088,55475,2007,Feldmoching - Hasenbergl
+1773,55667,2008,Feldmoching - Hasenbergl
+1871,55180,2009,Feldmoching - Hasenbergl
+1858,56130,2010,Feldmoching - Hasenbergl
+1775,57183,2011,Feldmoching - Hasenbergl
+1724,58245,2012,Feldmoching - Hasenbergl
+1290,48534,2000,Laim
+1246,48739,2001,Laim
+1568,48606,2002,Laim
+1880,48708,2003,Laim
+1823,48841,2004,Laim
+2209,48927,2005,Laim
+1896,50028,2006,Laim
+1649,50600,2007,Laim
+1485,51329,2008,Laim
+1717,51338,2009,Laim
+1540,51805,2010,Laim
+1488,52733,2011,Laim
+1423,53359,2012,Laim
