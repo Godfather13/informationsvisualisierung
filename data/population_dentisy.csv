@@ -1,40 +1,325 @@
-district,population,year
-14-17,11159981,1875
-18-24,14853788,1875
-25-44,44106543,1875
-14-17,3159981,1900
-18-24,13853788,1900
-25-44,54106543,1900
-14-17,4159981,1925
-18-24,12853788,1925
-25-44,6106543,1925
-14-17,5159981,1950
-18-24,11853788,1950
-25-44,7106543,1950
-14-17,6159981,1975
-18-24,10853788,1975
-25-44,8106543,1975
-14-17,7159981,1980
-18-24,9853788,1980
-25-44,9106543,1980
-14-17,8159981,1985
-18-24,8853788,1985
-25-44,10106543,1985
-14-17,9159981,1990
-18-24,7853788,1990
-25-44,11106543,1990
-14-17,10159981,1995
-18-24,6853788,1995
-25-44,12106543,1995
-14-17,11159981,2000
-18-24,5853788,2000
-25-44,13106543,2000
-14-17,12159981,2005
-18-24,4853788,2005
-25-44,14106543,2005
-14-17,13159981,2010
-18-24,3853788,2010
-25-44,15106543,2010
-14-17,14159981,2015
-18-24,2853788,2015
-25-44,16106543,2015
+Altstadt - Lehel,18374,2000
+Altstadt - Lehel,18462,2001
+Altstadt - Lehel,18193,2002
+Altstadt - Lehel,18159,2003
+Altstadt - Lehel,18210,2004
+Altstadt - Lehel,18631,2005
+Altstadt - Lehel,18876,2006
+Altstadt - Lehel,19228,2007
+Altstadt - Lehel,19505,2008
+Altstadt - Lehel,18932,2009
+Altstadt - Lehel,19207,2010
+Altstadt - Lehel,19707,2011
+Altstadt - Lehel,20048,2012
+Ludwigsvorstadt - Isarvorstadt,44451,2000
+Ludwigsvorstadt - Isarvorstadt,44484,2001
+Ludwigsvorstadt - Isarvorstadt,44059,2002
+Ludwigsvorstadt - Isarvorstadt,43637,2003
+Ludwigsvorstadt - Isarvorstadt,43469,2004
+Ludwigsvorstadt - Isarvorstadt,43945,2005
+Ludwigsvorstadt - Isarvorstadt,45736,2006
+Ludwigsvorstadt - Isarvorstadt,46520,2007
+Ludwigsvorstadt - Isarvorstadt,47599,2008
+Ludwigsvorstadt - Isarvorstadt,46446,2009
+Ludwigsvorstadt - Isarvorstadt,47357,2010
+Ludwigsvorstadt - Isarvorstadt,48231,2011
+Ludwigsvorstadt - Isarvorstadt,49657,2012
+Maxvorstadt,41726,2000
+Maxvorstadt,42159,2001
+Maxvorstadt,41606,2002
+Maxvorstadt,41502,2003
+Maxvorstadt,41581,2004
+Maxvorstadt,42201,2005
+Maxvorstadt,46058,2006
+Maxvorstadt,47711,2007
+Maxvorstadt,48884,2008
+Maxvorstadt,48619,2009
+Maxvorstadt,48875,2010
+Maxvorstadt,49498,2011
+Maxvorstadt,50877,2012
+Schwabing West,53789,2000
+Schwabing West,54580,2001
+Schwabing West,54272,2002
+Schwabing West,54351,2003
+Schwabing West,55231,2004
+Schwabing West,56033,2005
+Schwabing West,59553,2006
+Schwabing West,61514,2007
+Schwabing West,62541,2008
+Schwabing West,62028,2009
+Schwabing West,62856,2010
+Schwabing West,63644,2011
+Schwabing West,64768,2012
+Au - Haidhausen,52028,2000
+Au - Haidhausen,51947,2001
+Au - Haidhausen,52000,2002
+Au - Haidhausen,51636,2003
+Au - Haidhausen,51383,2004
+Au - Haidhausen,52502,2005
+Au - Haidhausen,54382,2006
+Au - Haidhausen,55288,2007
+Au - Haidhausen,55853,2008
+Au - Haidhausen,55590,2009
+Au - Haidhausen,56322,2010
+Au - Haidhausen,57297,2011
+Au - Haidhausen,58881,2012
+Sendling,34462,2000
+Sendling,34820,2001
+Sendling,35102,2002
+Sendling,35113,2003
+Sendling,35691,2004
+Sendling,35966,2005
+Sendling,37146,2006
+Sendling,37940,2007
+Sendling,38335,2008
+Sendling,38112,2009
+Sendling,38567,2010
+Sendling,39002,2011
+Sendling,39567,2012
+Sendling - Westpark,48388,2000
+Sendling - Westpark,48608,2001
+Sendling - Westpark,48448,2002
+Sendling - Westpark,48564,2003
+Sendling - Westpark,48669,2004
+Sendling - Westpark,49472,2005
+Sendling - Westpark,50903,2006
+Sendling - Westpark,51745,2007
+Sendling - Westpark,52257,2008
+Sendling - Westpark,52185,2009
+Sendling - Westpark,52495,2010
+Sendling - Westpark,53271,2011
+Sendling - Westpark,54552,2012
+Schwanthalerhöhe,24883,2000
+Schwanthalerhöhe,24905,2001
+Schwanthalerhöhe,25078,2002
+Schwanthalerhöhe,25328,2003
+Schwanthalerhöhe,25369,2004
+Schwanthalerhöhe,25507,2005
+Schwanthalerhöhe,26103,2006
+Schwanthalerhöhe,26877,2007
+Schwanthalerhöhe,27778,2008
+Schwanthalerhöhe,27814,2009
+Schwanthalerhöhe,28004,2010
+Schwanthalerhöhe,28678,2011
+Schwanthalerhöhe,29402,2012
+Neuhausen - Nymphenburg,81968,2000
+Neuhausen - Nymphenburg,82235,2001
+Neuhausen - Nymphenburg,81947,2002
+Neuhausen - Nymphenburg,81661,2003
+Neuhausen - Nymphenburg,81921,2004
+Neuhausen - Nymphenburg,82156,2005
+Neuhausen - Nymphenburg,84604,2006
+Neuhausen - Nymphenburg,85964,2007
+Neuhausen - Nymphenburg,87043,2008
+Neuhausen - Nymphenburg,87846,2009
+Neuhausen - Nymphenburg,89286,2010
+Neuhausen - Nymphenburg,92139,2011
+Neuhausen - Nymphenburg,94257,2012
+Moosach,45507,2000
+Moosach,46174,2001
+Moosach,46333,2002
+Moosach,46546,2003
+Moosach,46856,2004
+Moosach,47198,2005
+Moosach,47754,2006
+Moosach,48306,2007
+Moosach,48451,2008
+Moosach,48692,2009
+Moosach,48421,2010
+Moosach,49384,2011
+Moosach,50253,2012
+Milbertshofen -  Am Hart,60225,2000
+Milbertshofen -  Am Hart,61034,2001
+Milbertshofen -  Am Hart,61655,2002
+Milbertshofen -  Am Hart,61886,2003
+Milbertshofen -  Am Hart,63076,2004
+Milbertshofen -  Am Hart,64612,2005
+Milbertshofen -  Am Hart,66992,2006
+Milbertshofen -  Am Hart,67864,2007
+Milbertshofen -  Am Hart,68198,2008
+Milbertshofen -  Am Hart,68023,2009
+Milbertshofen -  Am Hart,68970,2010
+Milbertshofen -  Am Hart,70470,2011
+Milbertshofen -  Am Hart,72506,2012
+Schwabing -  Freimann,57653,2000
+Schwabing -  Freimann,59392,2001
+Schwabing -  Freimann,60060,2002
+Schwabing -  Freimann,60215,2003
+Schwabing -  Freimann,59602,2004
+Schwabing -  Freimann,59767,2005
+Schwabing -  Freimann,62430,2006
+Schwabing -  Freimann,63832,2007
+Schwabing -  Freimann,64350,2008
+Schwabing -  Freimann,63720,2009
+Schwabing -  Freimann,65158,2010
+Schwabing -  Freimann,66706,2011
+Schwabing -  Freimann,68530,2012
+Bogenhausen,70984,2000
+Bogenhausen,71716,2001
+Bogenhausen,72429,2002
+Bogenhausen,73070,2003
+Bogenhausen,72982,2004
+Bogenhausen,73860,2005
+Bogenhausen,75657,2006
+Bogenhausen,76709,2007
+Bogenhausen,77112,2008
+Bogenhausen,76684,2009
+Bogenhausen,77542,2010
+Bogenhausen,79175,2011
+Bogenhausen,80816,2012
+Berg am Laim,37017,2000
+Berg am Laim,37544,2001
+Berg am Laim,37769,2002
+Berg am Laim,37607,2003
+Berg am Laim,38127,2004
+Berg am Laim,38327,2005
+Berg am Laim,38995,2006
+Berg am Laim,39783,2007
+Berg am Laim,40038,2008
+Berg am Laim,39787,2009
+Berg am Laim,40550,2010
+Berg am Laim,41342,2011
+Berg am Laim,42310,2012
+Trudering - Riem,43003,2000
+Trudering - Riem,45403,2001
+Trudering - Riem,47186,2002
+Trudering - Riem,47919,2003
+Trudering - Riem,48914,2004
+Trudering - Riem,50990,2005
+Trudering - Riem,53915,2006
+Trudering - Riem,56487,2007
+Trudering - Riem,59031,2008
+Trudering - Riem,60879,2009
+Trudering - Riem,62756,2010
+Trudering - Riem,64983,2011
+Trudering - Riem,65869,2012
+Ramersdorf - Perlach,99995,2000
+Ramersdorf - Perlach,100387,2001
+Ramersdorf - Perlach,100129,2002
+Ramersdorf - Perlach,100724,2003
+Ramersdorf - Perlach,100844,2004
+Ramersdorf - Perlach,101820,2005
+Ramersdorf - Perlach,102689,2006
+Ramersdorf - Perlach,103447,2007
+Ramersdorf - Perlach,104089,2008
+Ramersdorf - Perlach,103732,2009
+Ramersdorf - Perlach,104737,2010
+Ramersdorf - Perlach,105900,2011
+Ramersdorf - Perlach,107164,2012
+Obergiesing - Fasangarten,43974,2000
+Obergiesing - Fasangarten,44143,2001
+Obergiesing - Fasangarten,44616,2002
+Obergiesing - Fasangarten,44761,2003
+Obergiesing - Fasangarten,44473,2004
+Obergiesing - Fasangarten,45132,2005
+Obergiesing - Fasangarten,47007,2006
+Obergiesing - Fasangarten,47791,2007
+Obergiesing - Fasangarten,48282,2008
+Obergiesing - Fasangarten,48425,2009
+Obergiesing - Fasangarten,49030,2010
+Obergiesing - Fasangarten,50656,2011
+Obergiesing - Fasangarten,51183,2012
+Untergiesing - Harlaching,46153,2000
+Untergiesing - Harlaching,46580,2001
+Untergiesing - Harlaching,46495,2002
+Untergiesing - Harlaching,46707,2003
+Untergiesing - Harlaching,46462,2004
+Untergiesing - Harlaching,46857,2005
+Untergiesing - Harlaching,48075,2006
+Untergiesing - Harlaching,48990,2007
+Untergiesing - Harlaching,49391,2008
+Untergiesing - Harlaching,48911,2009
+Untergiesing - Harlaching,49502,2010
+Untergiesing - Harlaching,50455,2011
+Untergiesing - Harlaching,51180,2012
+Thalkirchen - Obersendling - Forstenried - Fürstenried - Solln,76762,2000
+Thalkirchen - Obersendling - Forstenried - Fürstenried - Solln,77518,2001
+Thalkirchen - Obersendling - Forstenried - Fürstenried - Solln,77659,2002
+Thalkirchen - Obersendling - Forstenried - Fürstenried - Solln,77850,2003
+Thalkirchen - Obersendling - Forstenried - Fürstenried - Solln,78057,2004
+Thalkirchen - Obersendling - Forstenried - Fürstenried - Solln,79148,2005
+Thalkirchen - Obersendling - Forstenried - Fürstenried - Solln,80701,2006
+Thalkirchen - Obersendling - Forstenried - Fürstenried - Solln,82283,2007
+Thalkirchen - Obersendling - Forstenried - Fürstenried - Solln,82771,2008
+Thalkirchen - Obersendling - Forstenried - Fürstenried - Solln,82482,2009
+Thalkirchen - Obersendling - Forstenried - Fürstenried - Solln,83584,2010
+Thalkirchen - Obersendling - Forstenried - Fürstenried - Solln,85468,2011
+Thalkirchen - Obersendling - Forstenried - Fürstenried - Solln,87271,2012
+Hadern,41689,2000
+Hadern,41858,2001
+Hadern,42563,2002
+Hadern,42823,2003
+Hadern,43396,2004
+Hadern,43981,2005
+Hadern,44993,2006
+Hadern,46059,2007
+Hadern,46385,2008
+Hadern,46490,2009
+Hadern,46851,2010
+Hadern,47459,2011
+Hadern,47949,2012
+Pasing - Obermenzing,59758,2000
+Pasing - Obermenzing,60445,2001
+Pasing - Obermenzing,60616,2002
+Pasing - Obermenzing,61509,2003
+Pasing - Obermenzing,62081,2004
+Pasing - Obermenzing,62724,2005
+Pasing - Obermenzing,63763,2006
+Pasing - Obermenzing,64773,2007
+Pasing - Obermenzing,65290,2008
+Pasing - Obermenzing,65279,2009
+Pasing - Obermenzing,66244,2010
+Pasing - Obermenzing,67878,2011
+Pasing - Obermenzing,69295,2012
+Aubing - Lochhausen - Langwied,37423,2000
+Aubing - Lochhausen - Langwied,37693,2001
+Aubing - Lochhausen - Langwied,37532,2002
+Aubing - Lochhausen - Langwied,37566,2003
+Aubing - Lochhausen - Langwied,37595,2004
+Aubing - Lochhausen - Langwied,37560,2005
+Aubing - Lochhausen - Langwied,37857,2006
+Aubing - Lochhausen - Langwied,38091,2007
+Aubing - Lochhausen - Langwied,38327,2008
+Aubing - Lochhausen - Langwied,38268,2009
+Aubing - Lochhausen - Langwied,38863,2010
+Aubing - Lochhausen - Langwied,39789,2011
+Aubing - Lochhausen - Langwied,41116,2012
+Allach - Untermenzing,26682,2000
+Allach - Untermenzing,26794,2001
+Allach - Untermenzing,26903,2002
+Allach - Untermenzing,26977,2003
+Allach - Untermenzing,27374,2004
+Allach - Untermenzing,27586,2005
+Allach - Untermenzing,27730,2006
+Allach - Untermenzing,28165,2007
+Allach - Untermenzing,28796,2008
+Allach - Untermenzing,28732,2009
+Allach - Untermenzing,29161,2010
+Allach - Untermenzing,29693,2011
+Allach - Untermenzing,30393,2012
+Feldmoching - Hasenbergl,52413,2000
+Feldmoching - Hasenbergl,52896,2001
+Feldmoching - Hasenbergl,53010,2002
+Feldmoching - Hasenbergl,52961,2003
+Feldmoching - Hasenbergl,52958,2004
+Feldmoching - Hasenbergl,53389,2005
+Feldmoching - Hasenbergl,54245,2006
+Feldmoching - Hasenbergl,55475,2007
+Feldmoching - Hasenbergl,55667,2008
+Feldmoching - Hasenbergl,55180,2009
+Feldmoching - Hasenbergl,56130,2010
+Feldmoching - Hasenbergl,57183,2011
+Feldmoching - Hasenbergl,58245,2012
+Laim,48534,2000
+Laim,48739,2001
+Laim,48606,2002
+Laim,48708,2003
+Laim,48841,2004
+Laim,48927,2005
+Laim,50028,2006
+Laim,50600,2007
+Laim,51329,2008
+Laim,51338,2009
+Laim,51805,2010
+Laim,52733,2011
+Laim,53359,2012
