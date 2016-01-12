@@ -22,7 +22,7 @@ $(document).ready(function() {
 	});
     
     var mySlider = $("#ex14").slider();
-    mySlider.setValue(1900);
+    //mySlider.setValue(1900);
 
 
 	$("#year").html("1900");
@@ -52,15 +52,15 @@ $(document).ready(function() {
 // change sex
 	$("#select_sex_female").on("change", function() {
 		
-		update_char_1_sex();
+		update_chart_1_sex();
 	});
 	
 	$("#select_sex_male").on("change", function() {
 		
-		update_char_1_sex();
+		update_chart_1_sex();
 	});
 	
-	function update_char_1_sex(){
+	function update_chart_1_sex(){
 		
 		male = $("#select_sex_male").is(':checked');
 		female = $("#select_sex_female").is(':checked');
@@ -197,9 +197,8 @@ $(document).ready(function() {
 /* new year was selected */
 	function update_charts( selected_year ){
 		
-		render_char_1( selected_year );
-		render_char_2( selected_year );
-		render_char_3( selected_year );
+		render_chart_2( selected_year );
+		render_chart_3( selected_year );
 	}
 	
 	
@@ -220,11 +219,19 @@ var pie = d3.layout.pie()
     .sort(null)
     .value(function(d) { return d.population; });
 
-render_char_1( 1990 );
+render_chart_2( 2000 );
 	
-function render_char_1( selected_year ){
+function render_chart_2( selected_year ){
 	
 	d3.select("#chart_2 svg").remove();
+	d3.select("#chart_2").html("");
+	
+	var tip = d3.tip()
+	  .attr('class', 'd3-tip')
+	  .offset([-10, 0])
+	  .html(function(d) {
+		return "<strong>" + d.data.age + "</strong>";
+	  })
 	
 	var svg_2 = d3.select("#chart_2").append("svg")
 		.attr("width", width)
@@ -232,30 +239,40 @@ function render_char_1( selected_year ){
 		.append("g")
 		.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 	
+	svg_2.call(tip);
+	
 	d3.csv("data/population_dentisy.csv", function(error, udata) {
 
 		var data = udata.filter(function(row) {
-			return row["year"] <= selected_year && row["year"] >= selected_year -24
+			return row["year"] == selected_year
 		});
 
-		data.forEach(function(d) {
-			d.population = +d.population;
-		});
+		if( data != "" ){
 
-		var g = svg_2.selectAll(".arc")
-			.data(pie(data))
-			.enter().append("g")
-			.attr("class", "arc");
+			data.forEach(function(d) {
+				d.population = +d.population;
+			});
 
-		g.append("path")
-			.attr("d", arc)
-			.style("fill", function(d) { return color(d.data.age); });
+			var g = svg_2.selectAll(".arc")
+				.data(pie(data))
+				.enter().append("g")
+				.attr("class", "arc")
+				.on('mouseover', tip.show)
+				.on('mouseout', tip.hide);
 
-		g.append("text")
-			.attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
-			.attr("dy", ".35em")
-			.style("text-anchor", "middle")
-			.text(function(d) { return d.data.age; });
+			g.append("path")
+				.attr("d", arc)
+				.style("fill", function(d) { return color(d.data.age); });
+
+			g.append("text")
+				.attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
+				.attr("dy", ".35em")
+				.style("text-anchor", "middle");
+			
+		} else {
+			
+			d3.select("#chart_2").html("Keine Daten verfügbar.");
+		}
 	});
 }
 
@@ -276,41 +293,59 @@ var pie = d3.layout.pie()
     .sort(null)
     .value(function(d) { return d.population; });
 
-render_char_2( 1990 );
+render_chart_3( 2000 );
 	
-function render_char_2( selected_year ){
+function render_chart_3( selected_year ){
 	
 	d3.select("#chart_3 svg").remove();
+	d3.select("#chart_3").html("");
 	
-	var svg_2 = d3.select("#chart_3").append("svg")
+	var tip = d3.tip()
+	  .attr('class', 'd3-tip')
+	  .offset([-10, 0])
+	  .html(function(d) {
+		return "<strong>" + d.data.age + "</strong>";
+	  })
+	
+	var svg_3 = d3.select("#chart_3").append("svg")
 		.attr("width", width)
 		.attr("height", height)
 		.append("g")
 		.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 	
+	svg_3.call(tip);
+	
 	d3.csv("data/unemployed_density.csv", function(error, udata) {
 
 		var data = udata.filter(function(row) {
-		return row["year"] <= selected_year && row["year"] >= selected_year -24
+		return row["year"] == selected_year
 		});
 
-		data.forEach(function(d) {
-			d.population = +d.population;
-		});
+		if( data != "" ){
+			
+			data.forEach(function(d) {
+				d.population = +d.population;
+			});
 
-		var g = svg_2.selectAll(".arc")
-			.data(pie(data))
-			.enter().append("g")
-			.attr("class", "arc");
+			var g = svg_3.selectAll(".arc")
+				.data(pie(data))
+				.enter().append("g")
+				.attr("class", "arc")
+				.on('mouseover', tip.show)
+				.on('mouseout', tip.hide);
 
-		g.append("path")
-			.attr("d", arc)
-			.style("fill", function(d) { return color(d.data.age); });
+			g.append("path")
+				.attr("d", arc)
+				.style("fill", function(d) { return color(d.data.age); });
 
-		g.append("text")
-			.attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
-			.attr("dy", ".35em")
-			.style("text-anchor", "middle")
-			.text(function(d) { return d.data.age; });
+			g.append("text")
+				.attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
+				.attr("dy", ".35em")
+				.style("text-anchor", "middle");
+			
+		} else {
+			
+			d3.select("#chart_3").html("Keine Daten verfügbar.");
+		}
 	});
 }
