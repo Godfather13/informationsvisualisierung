@@ -9,6 +9,20 @@ svg {
   font: 10px sans-serif;
 }
 
+#select_percental, #select_absolute{
+	margin-right:5px;
+}
+
+#chart_2, #chart_3{
+	
+	margin-top:10px;
+}
+
+.inline-ratio{
+	
+	margin-left:-17px;
+}
+
 .y.axis path {
   display: none;
 }

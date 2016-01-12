@@ -56,8 +56,8 @@
 	   <div class="row">
         <h3>Population over the last 100 years</h3>
            <div>Choose gender (both is also possible)</div>
-           <label class="checkbox-inline"><input id="select_sex_male" checked="checked" type="checkbox" value="" />Male</label>
-           <label class="checkbox-inline"><input id="select_sex_female" checked="checked" type="checkbox" value="" />Female</label>
+           <label class="checkbox-inline"><input id="select_sex_male" checked="checked" type="checkbox" value="" /><span class="kdmf">Male</span></label>
+           <label class="checkbox-inline"><input id="select_sex_female" checked="checked" type="checkbox" value="" /><span class="kdmf">Female</span></label>
 		<div id="chart_1" class="module"></div>
       </div>
 	  
@@ -67,8 +67,12 @@
 		  <div id="chart_2" class="module"></div>
        </div>
         <div class="col-md-6">
-          <h3>Unemployed density in the districts</h3>
-		  <div id="chart_3" class="module"></div>
+			<h3>Unemployed density in the districts</h3>
+			<div class="inline-ratio">
+				<label class="checkbox-inline"><input name="type" id="select_percental" checked="checked" type="radio" value="" />percental</label>
+				<label class="checkbox-inline"><input name="type" id="select_absolute" type="radio" value="" />absolute</label>
+			</div>
+			<div id="chart_3" class="module"></div>
         </div>
       </div>
 	  

@@ -3,6 +3,8 @@ $.getScript("assets/js/bootstrap.min.js", function() {
 $.getScript("assets/js/bootstrap-slider.js", function() {
 });
 
+var year_global = 2000;
+	
 $(document).ready(function() {
 
 	$("#ex14").slider({
@@ -17,15 +19,15 @@ $(document).ready(function() {
 		var value = mySlider.slider('getValue');
 		var yr = value + 1900;
 		$("#year").text(yr); 
-		
+		year_global = yr;
 		update_charts(yr);
 	});
     
     var mySlider = $("#ex14").slider();
-    //mySlider.setValue(1900);
+    //mySlider.setValue(year_global);
 
 
-	$("#year").html("1900");
+	$("#year").html(year_global);
 
 });
 
@@ -230,7 +232,7 @@ function render_chart_2( selected_year ){
 	  .attr('class', 'd3-tip')
 	  .offset([-10, 0])
 	  .html(function(d) {
-		return "<strong>" + d.data.age + "</strong>";
+		return "<strong>" + d.data.age + ": " + d.data.population + "</strong>";
 	  })
 	
 	var svg_2 = d3.select("#chart_2").append("svg")
@@ -294,18 +296,42 @@ var pie = d3.layout.pie()
     .value(function(d) { return d.population; });
 
 render_chart_3( 2000 );
+
+// change type
+	$("#select_percental").on("change", function() {
+		
+		render_chart_3(year_global, 2);
+	});
 	
-function render_chart_3( selected_year ){
+	$("#select_absolute").on("change", function() {
+		
+		render_chart_3(year_global, 1);
+	});
+
+function render_chart_3( selected_year, type = 2 ){
 	
 	d3.select("#chart_3 svg").remove();
 	d3.select("#chart_3").html("");
 	
-	var tip = d3.tip()
-	  .attr('class', 'd3-tip')
-	  .offset([-10, 0])
-	  .html(function(d) {
-		return "<strong>" + d.data.age + "</strong>";
-	  })
+	if( type == 1 ){
+		
+		var tip = d3.tip()
+		  .attr('class', 'd3-tip')
+		  .offset([-10, 0])
+		  .html(function(d) {
+			return "<strong>" + d.data.age + ": " + d.data.population + "</strong>";
+		  })
+		  
+	} else if( type == 2 ){
+		
+		var tip = d3.tip()
+		  .attr('class', 'd3-tip')
+		  .offset([-10, 0])
+		  .html(function(d) {
+			return "<strong>" + d.data.age + ": " + (d.data.population).toFixed(2) + " %</strong>";
+		  })
+	}
+	
 	
 	var svg_3 = d3.select("#chart_3").append("svg")
 		.attr("width", width)
@@ -315,7 +341,7 @@ function render_chart_3( selected_year ){
 	
 	svg_3.call(tip);
 	
-	d3.csv("data/unemployed_density.csv", function(error, udata) {
+	d3.csv("data/unemployed_density_ratio.csv", function(error, udata) {
 
 		var data = udata.filter(function(row) {
 		return row["year"] == selected_year
@@ -323,9 +349,19 @@ function render_chart_3( selected_year ){
 
 		if( data != "" ){
 			
-			data.forEach(function(d) {
-				d.population = +d.population;
-			});
+			if( type == 1 ){
+				
+				data.forEach(function(d) {
+					d.population = +d.unemployed;
+				});
+				  
+			} else if( type == 2 ){
+				
+				data.forEach(function(d) {
+					d.population = +(d.unemployed / (d.population / 100));
+				});
+				
+			}
 
 			var g = svg_3.selectAll(".arc")
 				.data(pie(data))
