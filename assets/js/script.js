@@ -232,7 +232,7 @@ function render_char_1( selected_year ){
 		.append("g")
 		.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 	
-	d3.csv("data/pie_data.csv", function(error, udata) {
+	d3.csv("data/population_dentisy.csv", function(error, udata) {
 
 		var data = udata.filter(function(row) {
 			return row["year"] <= selected_year && row["year"] >= selected_year -24
@@ -288,7 +288,7 @@ function render_char_2( selected_year ){
 		.append("g")
 		.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 	
-	d3.csv("data/pie_data.csv", function(error, udata) {
+	d3.csv("data/unemployed_density.csv", function(error, udata) {
 
 		var data = udata.filter(function(row) {
 		return row["year"] <= selected_year && row["year"] >= selected_year -24
@@ -313,91 +313,4 @@ function render_char_2( selected_year ){
 			.style("text-anchor", "middle")
 			.text(function(d) { return d.data.age; });
 	});
-}
-
-/* CHART 4 */
-
-var margin = {top: 30, right: 20, bottom: 30, left: 40},
-    width = document.getElementById('chart_4').offsetWidth - 50 - margin.left - margin.right,
-    height = 300 - margin.top - margin.bottom;
-	
-var formatPercent = d3.format(".0%");
-
-var x = d3.scale.ordinal()
-    .rangeRoundBands([0, width], .1);
-
-var y = d3.scale.linear()
-    .range([height, 0]);
-
-var xAxis = d3.svg.axis()
-    .scale(x)
-    .orient("bottom");
-
-var yAxis = d3.svg.axis()
-    .scale(y)
-    .orient("left")
-    .tickFormat(formatPercent);
-
-var tip = d3.tip()
-  .attr('class', 'd3-tip')
-  .attr('class', 'd3-tip')
-  .offset([-10, 0])
-  .html(function(d) {
-    return "<strong>Frequency:</strong> <span style='color:red'>" + d.frequency + "</span>";
-  })
-
-  render_char_3( 1990 );
-  
- function render_char_3( selected_year ){
-  
-	d3.select("#chart_4 svg").remove();
-  
-	var svg_4 = d3.select("#chart_4").append("svg")
-		.attr("width", width + margin.left + margin.right)
-		.attr("height", height + margin.top + margin.bottom)
-	  .append("g")
-		.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-
-	svg_4.call(tip);
-
-	d3.csv("data/bar_data.csv", type, function(error, udata) {
-		
-		var data = udata.filter(function(row) {
-		return row["year"] <= selected_year && row["year"] >= selected_year -24
-		});
-		
-	  x.domain(data.map(function(d) { return d.letter; }));
-	  y.domain([0, d3.max(data, function(d) { return d.frequency; })]);
-
-	  svg_4.append("g")
-		  .attr("class", "x axis")
-		  .attr("transform", "translate(0," + height + ")")
-		  .call(xAxis);
-
-	  svg_4.append("g")
-		  .attr("class", "y axis")
-		  .call(yAxis)
-		.append("text")
-		  .attr("transform", "rotate(-90)")
-		  .attr("y", 6)
-		  .attr("dy", ".71em")
-		  .style("text-anchor", "end") ;
-
-	  svg_4.selectAll(".bar")
-		  .data(data)
-		.enter().append("rect")
-		  .attr("class", "bar")
-		  .attr("x", function(d) { return x(d.letter); })
-		  .attr("width", x.rangeBand())
-		  .attr("y", function(d) { return y(d.frequency); })
-		  .attr("height", function(d) { return height - y(d.frequency); })
-		  .on('mouseover', tip.show)
-		  .on('mouseout', tip.hide)
-
-	});
-
-	function type(d) {
-	  d.frequency = +d.frequency;
-	  return d;
-	}
 }
