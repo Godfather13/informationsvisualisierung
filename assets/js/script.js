@@ -87,7 +87,17 @@ $(document).ready(function() {
 
 		// A sliding container to hold the bars by birthyear.
 			var birthyears = svg_pop_chart.append("g").attr("class", "birthyears");
-					
+				
+		// Tooltip
+			var tipm = d3.tip()
+			  .attr('class', 'd3-tip')
+			  .offset([-10, 0])
+			  .html(function(d) {
+				return "<strong>" + d + "</strong>";
+			  })
+			  
+			 svg_pop_chart.call(tipm);
+				
 		// ---
 			d3.csv("data/population.csv", function(error, raw_data) {
 				
@@ -153,6 +163,8 @@ $(document).ready(function() {
 						.attr("x", -barWidth_pop_chart / 2)
 						.attr("width", barWidth_pop_chart)
 						.attr("y", y_pop_chart)
+						.on('mouseover', tipm.show)
+						.on('mouseout', tipm.hide)
 						.attr("class", !male && female ? "only_female" : "" )  
 						.attr("height", function(value) { return height_pop_chart - y_pop_chart(value); });
 
@@ -169,7 +181,7 @@ $(document).ready(function() {
 						.attr("x", function(age) { return x_pop_chart(year - age); })
 						.attr("y", height_pop_chart + 4)
 						.attr("dy", ".71em")
-					.text(function(age) { return age; });
+						.text(function(age) { return age; });
 
 				// change year
 					d3.select("#year").on("DOMSubtreeModified", function(){
