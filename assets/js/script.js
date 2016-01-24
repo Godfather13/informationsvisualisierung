@@ -142,7 +142,7 @@ $(document).ready(function() {
 				
 				// Add labeled rects for each birthyear (so that no enter or exit is required).
 					birthyear = birthyears.selectAll(".birthyear")
-						.data(d3.range(year0 - age1, year1 + 1, 5))
+						.data(d3.range(year0 - age1, year1 + 1, 1))
 						.enter().append("g")
 						.attr("class", "birthyear")
 						.attr("transform", function(birthyear) { return "translate(" + x_pop_chart(birthyear) + ",0)"; });
@@ -163,7 +163,7 @@ $(document).ready(function() {
 						
 				// Add labels to show age (separate; not animated).
 					svg_pop_chart.selectAll(".age")
-						.data(d3.range(0, age1 + 1, 5))
+						.data(d3.range(0, age1 + 1, 1))
 						.enter().append("text")
 						.attr("class", "age")
 						.attr("x", function(age) { return x_pop_chart(year - age); })
@@ -199,8 +199,8 @@ $(document).ready(function() {
 /* new year was selected */
 	function update_charts( selected_year ){
 		
-		render_chart_2( selected_year );
-		render_chart_3( selected_year );
+		render_chart_2( selected_year, 2 );
+		render_chart_3( selected_year, 2 );
 	}
 	
 	
@@ -295,7 +295,7 @@ var pie = d3.layout.pie()
     .sort(null)
     .value(function(d) { return d.population; });
 
-render_chart_3( 2000 );
+render_chart_3( 2000, 2 );
 
 // change type
 	$("#select_percental").on("change", function() {
@@ -308,7 +308,9 @@ render_chart_3( 2000 );
 		render_chart_3(year_global, 1);
 	});
 
-function render_chart_3( selected_year, type = 2 ){
+function render_chart_3( selected_year, type ){
+	
+	
 	
 	d3.select("#chart_3 svg").remove();
 	d3.select("#chart_3").html("");
