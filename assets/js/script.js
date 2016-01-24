@@ -174,6 +174,7 @@ $(document).ready(function() {
 						.text(function(birthyear) { return birthyear; });
 						
 				// Add labels to show age (separate; not animated).
+				/*
 					svg_pop_chart.selectAll(".age")
 						.data(d3.range(0, age1 + 1, 1))
 						.enter().append("text")
@@ -182,7 +183,7 @@ $(document).ready(function() {
 						.attr("y", height_pop_chart + 4)
 						.attr("dy", ".71em")
 						.text(function(age) { return age; });
-
+*/
 				// change year
 					d3.select("#year").on("DOMSubtreeModified", function(){
 
